@@ -11,7 +11,11 @@
 </head>
 <body>
 
-<canvas id="neural-bg" aria-hidden="true"></canvas>
+<div class="aurora-bg" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
 
 <header>
   <nav class="wrap">
@@ -26,8 +30,8 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1 data-hero-in>I'm <span class="accent">Sleeman</span> — a software engineer who builds things end-to-end, from agent logic to the infra underneath.</h1>
-    <p class="hero-sub" data-hero-in>A collection of what I've built: AI-powered tools, full-stack apps, and backend systems, spanning Python, Java, and JavaScript.</p>
+    <h1 data-hero-in>Software Engineer specializing in <span class="accent">AI systems</span>, full-stack development, and cloud infrastructure.</h1>
+    <p class="hero-sub" data-hero-in>A portfolio of full-stack applications, backend systems, and AI-powered tools, developed across Python, Java, and JavaScript.</p>
     <div class="hero-actions" data-hero-in>
       <a href="projects.html" class="btn btn-primary" data-magnetic>View projects →</a>
       <a href="https://github.com/Sleeman01" target="_blank" rel="noopener" class="btn btn-ghost" data-magnetic>GitHub ↗</a>
@@ -61,8 +65,8 @@
     </div>
     <div class="about-grid">
       <div>
-        <p>I'm a software engineer who likes building complete, working things — from full-stack web apps to backend APIs to AI-powered tools. My projects span Java/Spring Boot backends, React/Node full-stack apps, and Python-based AI tools.</p>
-        <p>Most recently I've been deep in <strong>TestScope AI</strong>, an agent that checks code against its own requirements — combining LangGraph, MCP servers, and a real Kubernetes/Terraform deployment.</p>
+        <p>Software engineer with experience building complete, production-oriented systems — from full-stack web applications to backend APIs and AI-powered tools. Work spans Java/Spring Boot backends, React/Node full-stack applications, and Python-based AI tooling.</p>
+        <p>Current focus: <strong>TestScope AI</strong>, an agent that verifies code against its own requirements, combining LangGraph, MCP servers, and a Kubernetes/Terraform deployment.</p>
         <a href="projects.html" class="btn btn-ghost" style="margin-top:8px;" data-magnetic>See all projects →</a>
       </div>
       <div class="stack-list">
@@ -95,7 +99,6 @@
   © <span id="year"></span> Sleeman. Built with plain HTML/CSS, hosted free on GitHub Pages.
 </footer>
 
-<script src="neural-bg.js"></script>
 <script src="main.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
