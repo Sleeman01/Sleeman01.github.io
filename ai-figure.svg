@@ -1,0 +1,90 @@
+<svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <radialGradient id="glowCore" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="headFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1533"/>
+      <stop offset="55%" stop-color="#2A2044"/>
+      <stop offset="100%" stop-color="#150E23"/>
+    </linearGradient>
+    <linearGradient id="edgeLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F3F1F8"/>
+      <stop offset="35%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fadeMask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="fadeLeft">
+      <rect x="0" y="0" width="600" height="700" fill="url(#fadeMask)"/>
+    </mask>
+    <filter id="softBlur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="bigBlur"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+
+  <g mask="url(#fadeLeft)">
+    <!-- ambient glow behind head -->
+    <ellipse cx="330" cy="260" rx="260" ry="260" fill="url(#glowCore)"/>
+
+    <!-- faint circuit lines -->
+    <g stroke="#8B5CF6" stroke-width="1.4" opacity="0.35" fill="none">
+      <path d="M120 180 L220 180 L250 210 L340 210"/>
+      <path d="M110 340 L200 340 L230 310 L420 310"/>
+      <path d="M140 480 L260 480 L290 450 L460 450"/>
+      <circle cx="120" cy="180" r="4" fill="#8B5CF6" stroke="none"/>
+      <circle cx="110" cy="340" r="4" fill="#8B5CF6" stroke="none"/>
+      <circle cx="140" cy="480" r="4" fill="#8B5CF6" stroke="none"/>
+      <circle cx="460" cy="450" r="4" fill="#8B5CF6" stroke="none"/>
+    </g>
+
+    <!-- shoulders / body -->
+    <path d="M170 700 C170 520 230 470 330 470 C430 470 490 520 490 700 Z" fill="url(#headFill)" stroke="#3A2C5C" stroke-width="1.5"/>
+
+    <!-- neck -->
+    <rect x="295" y="360" width="70" height="70" rx="14" fill="url(#headFill)" stroke="#3A2C5C" stroke-width="1.5"/>
+
+    <!-- head (faceted polygon) -->
+    <polygon points="330,60 420,110 440,220 400,320 330,360 260,320 220,220 240,110"
+      fill="url(#headFill)" stroke="url(#edgeLight)" stroke-width="2"/>
+
+    <!-- facet lines for low-poly feel -->
+    <g stroke="#4C3080" stroke-width="1" opacity="0.7" fill="none">
+      <line x1="330" y1="60" x2="330" y2="360"/>
+      <line x1="220" y1="220" x2="440" y2="220"/>
+      <line x1="240" y1="110" x2="330" y2="220"/>
+      <line x1="420" y1="110" x2="330" y2="220"/>
+      <line x1="260" y1="320" x2="330" y2="220"/>
+      <line x1="400" y1="320" x2="330" y2="220"/>
+    </g>
+
+    <!-- visor -->
+    <rect x="262" y="175" width="136" height="46" rx="23" fill="#0A0710" stroke="#4C3080" stroke-width="1.5"/>
+
+    <!-- glowing eyes -->
+    <circle cx="305" cy="198" r="13" fill="url(#eyeGlow)"/>
+    <circle cx="355" cy="198" r="13" fill="url(#eyeGlow)"/>
+    <circle cx="305" cy="198" r="4" fill="#F3F1F8"/>
+    <circle cx="355" cy="198" r="4" fill="#F3F1F8"/>
+
+    <!-- antenna -->
+    <line x1="330" y1="60" x2="330" y2="24" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="330" cy="18" r="7" fill="url(#eyeGlow)"/>
+
+    <!-- floating particles -->
+    <g fill="#C4B5FD">
+      <circle cx="160" cy="140" r="3" filter="url(#softBlur)" opacity="0.8"/>
+      <circle cx="480" cy="200" r="2.5" filter="url(#softBlur)" opacity="0.7"/>
+      <circle cx="150" cy="380" r="2" filter="url(#softBlur)" opacity="0.6"/>
+      <circle cx="470" cy="420" r="3" filter="url(#softBlur)" opacity="0.7"/>
+    </g>
+  </g>
+</svg>
